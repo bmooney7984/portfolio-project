@@ -85,7 +85,78 @@ p {
   line-height: 28px;
 }
 
-@media (max-width: 1200px) {
+.about p {
+  margin-bottom: 50px;
+}
+
+.projects {
+  margin-top: 100px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 40px;
+  row-gap: 10px;
+  justify-items: center;
+  margin: 20px 60px;
+}
+
+.projects h2 {
+  width: 300px;
+}
+
+.project:first-of-type {
+  grid-column: 1 / 2;
+}
+
+.project {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.project-info {
+  display: grid;
+  grid-template-rows: min-content 100px;
+  grid-template-columns: 1fr min-content min-content;
+  column-gap: 10px;
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.15);
+  padding: 12px 18px;
+}
+
+.project-photo {
+  width: 100%;
+}
+
+.project p {
+  grid-column: 1 / 4;
+}
+
+.project i {
+  font-size: 24px;
+  align-self: center;
+}
+
+.project .icon {
+  width: 26px;
+}
+
+h3 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+.project p {
+  font-size: 14px;
+  color: hsl(0, 0%, 30%);
+  line-height: normal;
+}
+
+@media (max-width: 1099px) {
   .diagonal-stripe {
     transform: translate(0px, -300px) skewY(-16deg);
   }
@@ -123,7 +194,7 @@ p {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 759px) {
   .top {
     display: flex;
     flex-direction: column;
@@ -157,6 +228,10 @@ p {
   .icon-container {
     grid-template-columns: min-content min-content;
     justify-content: center;
+  }
+  
+  .projects h2 {
+    width: auto;
   }
   
 }
